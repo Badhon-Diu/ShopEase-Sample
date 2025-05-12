@@ -3,12 +3,14 @@ import Search from "./Search";
 import SingleProductCard from "./SingleProductCard";
 
 export default function ProductsCards({
+  handlesetCart,
   setisshowmodal,
   ModalInfo,
   isshowmodal,
   onSearch,
   products,
   modalinfo,
+  notify,
 }) {
   return (
     <>
@@ -24,6 +26,8 @@ export default function ProductsCards({
           {/* Product Card 1 */}
           {products.map((SingleProduct) => (
             <SingleProductCard
+            notify ={notify}
+              handlesetCart={handlesetCart}
               setisshowmodal={setisshowmodal}
               ModalInfo={ModalInfo}
               key={SingleProduct.id}

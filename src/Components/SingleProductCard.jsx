@@ -2,6 +2,8 @@ export default function SingleProductCard({
   setisshowmodal,
   SingleProduct,
   ModalInfo,
+  handlesetCart,
+  notify,
 }) {
   return (
     <>
@@ -27,9 +29,16 @@ export default function SingleProductCard({
           <p className="text-gray-500 text-sm mt-1">
             Seller : {SingleProduct.seller}
           </p>
-          <button className="mt-4 cursor-pointer w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-300">
+          <button
+            onClick={() => {
+              handlesetCart(SingleProduct);
+              notify();
+            }}
+            className="mt-4 cursor-pointer w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-300"
+          >
             Add to Cart
           </button>
+
           <button
             onClick={() => {
               ModalInfo(SingleProduct);

@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header({ carts }) {
   return (
     <>
       <header className="bg-gradient-to-r from-purple-600 to-indigo-600 px-20 rounded-sm text-white p-7 flex justify-between items-center shadow-lg">
@@ -21,7 +21,7 @@ export default function Header() {
               href="#"
               className="hover:text-yellow-300 transition duration-300"
             >
-              Cart
+              Cart <span className="text-xs absolute ml-2">{carts.length}</span>
             </a>
           </nav>
           <label className="swap swap-rotate flex gap-4 justify-center">
