@@ -1,0 +1,71 @@
+[
+  {
+    "id": 1,
+    "productName": "Wireless Headphones",
+    "price": 59.99,
+    "rating": 4.7,
+    "seller": "TechTrendz"
+  },
+  {
+    "id": 2,
+    "productName": "Smart Watch",
+    "price": 99.5,
+    "rating": 4.2,
+    "seller": "GadgetHub"
+  },
+  {
+    "id": 3,
+    "productName": "Leather Wallet",
+    "price": 29.95,
+    "rating": 4.5,
+    "seller": "StyleCraft"
+  },
+  {
+    "id": 4,
+    "productName": "Bluetooth Speaker",
+    "price": 45.0,
+    "rating": 3.9,
+    "seller": "SoundWave"
+  },
+  {
+    "id": 5,
+    "productName": "Ergonomic Mouse",
+    "price": 34.99,
+    "rating": 4.8,
+    "seller": "OfficeGear"
+  },
+  {
+    "id": 6,
+    "productName": "Running Shoes",
+    "price": 79.99,
+    "rating": 4.4,
+    "seller": "FitLife"
+  },
+  {
+    "id": 7,
+    "productName": "Coffee Maker",
+    "price": 89.0,
+    "rating": 4.6,
+    "seller": "KitchenKing"
+  },
+  {
+    "id": 8,
+    "productName": "Backpack",
+    "price": 49.95,
+    "rating": 4.1,
+    "seller": "TravelPro"
+  },
+  {
+    "id": 9,
+    "productName": "Gaming Keyboard",
+    "price": 69.99,
+    "rating": 4.9,
+    "seller": "GameZone"
+  },
+  {
+    "id": 10,
+    "productName": "Sunglasses",
+    "price": 24.5,
+    "rating": 4
+  }
+]
