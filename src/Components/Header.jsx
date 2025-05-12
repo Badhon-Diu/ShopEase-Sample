@@ -1,4 +1,4 @@
-export default function Header({ carts }) {
+export default function Header({setisshowcartmodal , carts }) {
   return (
     <>
       <header className="bg-gradient-to-r from-purple-600 to-indigo-600 px-20 rounded-sm text-white p-7 flex justify-between items-center shadow-lg">
@@ -18,6 +18,7 @@ export default function Header({ carts }) {
               Profile
             </a>
             <a
+            onClick={()=>setisshowcartmodal(true)}
               href="#"
               className="hover:text-yellow-300 transition duration-300"
             >

@@ -1,8 +1,13 @@
+import CardsModal from "./CardsModal";
 import Modal from "./Modal";
 import Search from "./Search";
 import SingleProductCard from "./SingleProductCard";
 
 export default function ProductsCards({
+  onDelete,
+  carts,
+  setisshowcartmodal,
+  isshowcartmodal,
   handlesetCart,
   setisshowmodal,
   ModalInfo,
@@ -18,6 +23,13 @@ export default function ProductsCards({
         {/* Search and Filter Section */}
         <Search onSearch={onSearch} products={products}></Search>
 
+        {isshowcartmodal && (
+          <CardsModal
+            onDelete={onDelete}
+            carts={carts}
+            setisshowcartmodal={setisshowcartmodal}
+          ></CardsModal>
+        )}
         {isshowmodal && (
           <Modal setisshowmodal={setisshowmodal} modalinfo={modalinfo}></Modal>
         )}
@@ -26,7 +38,7 @@ export default function ProductsCards({
           {/* Product Card 1 */}
           {products.map((SingleProduct) => (
             <SingleProductCard
-            notify ={notify}
+              notify={notify}
               handlesetCart={handlesetCart}
               setisshowmodal={setisshowmodal}
               ModalInfo={ModalInfo}

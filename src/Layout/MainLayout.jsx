@@ -8,11 +8,17 @@ export default function MainLayout() {
   const [isshowmodal, setisshowmodal] = useState(false);
   const [modalinfo, setmodalinfo] = useState([]);
   const [carts, setcarts] = useState([]);
+  const [isshowcartmodal, setisshowcartmodal] = useState(false);
   const notify = () => toast("  Added to the Card !");
   function handlesetCart(singlecart) {
     setcarts((prev) => {
       return [...prev, singlecart];
     });
+  }
+
+  function handleDelete(cartId) {
+    let filtercart = carts.filter((singlecard) => singlecard.id !== cartId);
+    setcarts(filtercart);
   }
 
   function ModalInfo(info) {
@@ -40,8 +46,12 @@ export default function MainLayout() {
   return (
     <>
       <ToastContainer></ToastContainer>
-      <Header carts={carts}></Header>
+      <Header setisshowcartmodal={setisshowcartmodal} carts={carts}></Header>
       <ProductsCards
+      onDelete={handleDelete}
+        carts={carts}
+        setisshowcartmodal={setisshowcartmodal}
+        isshowcartmodal={isshowcartmodal}
         handlesetCart={handlesetCart}
         setisshowmodal={setisshowmodal}
         modalinfo={modalinfo}
